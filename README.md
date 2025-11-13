@@ -22,11 +22,6 @@ The repository is split into two packages:
 
 Copy the sample environment files and fill in your credentials:
 
-```bash
-cp server/.env.example server/.env
-cp client/.env.example client/.env
-```
-
 > The backend loader looks for `.env` files in `server/.env` first and then the project root `.env`, so you can keep a single shared file if you prefer.
 
 Populate:
@@ -50,7 +45,6 @@ Populate:
 
 - `TIMEZONE_OFFSET` - Timezone offset in hours (default: -5 for EST)
 - `IMAGE_RETENTION_DAYS` - Days to keep images before cleanup (default: 60)
-
 
 
 > The server expects a Supabase service role key so it can verify sessions and perform CRUD. The client uses the anon key to handle Supabase Auth flows in the browser and forwards the user session token to the API automatically.
